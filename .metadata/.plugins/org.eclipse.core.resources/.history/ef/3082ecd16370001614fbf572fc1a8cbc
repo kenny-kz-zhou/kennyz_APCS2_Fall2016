@@ -41,16 +41,18 @@ public class Calculate {
 		double scndPart = 4 * a * c;
 		return (bVal - scndPart);
 	}
-	 
-	public static String toImproperFrac(int wholeNum, int numerator, int denominator){
-		int imprprNumrtr = denominator * wholeNum + numerator;
-		return (imprprNumrtr + "/" + denominator);
-	}
 	
-	public static String toMixedNum(int imprprNum, int denominator){
-		int wholeNum = imprprNum / denominator;
-		int numerator = denominator * wholeNum - imprprNum;
-		return (wholeNum + denominator + "/" + numerator);	
+	public static int toImproperFrac(int wholeNum, int numerator, int denominator){
+		int imprprNumrtr = denominator * wholeNum + numerator;
+		return (imprprNumrtr / denominator);
+		// System.out.print(imprprNumrtr "/" denominator);
 	}
-	public static String foil(int ax2, int bx, int c){
+
+	
+	public static int toMixedNum(int imprprNum, int denominator){
+		int numerator = imprprNum % denominator;
+		int wholeNum = imprprNum / denominator;
+		// below not done
+		return (wholeNum); return(numerator / denominator);
+	}
 }
