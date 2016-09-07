@@ -41,16 +41,54 @@ public class Calculate {
 		double scndPart = 4 * a * c;
 		return (bVal - scndPart);
 	}
-	 
+	
 	public static String toImproperFrac(int wholeNum, int numerator, int denominator){
 		int imprprNumrtr = denominator * wholeNum + numerator;
 		return (imprprNumrtr + "/" + denominator);
 	}
 	
 	public static String toMixedNum(int imprprNum, int denominator){
+		int numerator = imprprNum % denominator;
 		int wholeNum = imprprNum / denominator;
-		int numerator = denominator * wholeNum - imprprNum;
-		return (wholeNum + denominator + "/" + numerator);	
+		return (wholeNum + " " + numerator + "/" + denominator);
 	}
-	public static String foil(int ax2, int bx, int c){
+	
+	public static String foil(int A, int B, int C, int D, String n){
+		int first = A * C;
+		int second = A * D + B * B;
+		int third = B * D;
+		return (first + n + "^2" + second +  + third);
+	}
+	
+	public static int isDivisibleBy(int num1, int num2){
+		if(num1 % num2 == 0){
+			return(num1 / num2);
+		}
+	}
+	public static double absValue(double givenNum){
+		if (givenNum <= 0){
+			return(givenNum * -1);
+		}else{
+			return(givenNum);
+		}
+	}
+	public static int max(int num1, int num2){
+		if(num1 >= num2){
+			return (num1);
+		}else{
+			return (num2);
+		}
+	}
+	public static int min(int num1, int num2){
+		if(num1 >= num2){
+			return num2;
+		}else{
+			return num1;
+		}
+	}
+	public static double round2(double num1){
+		double roundedNum = (int)num1 * 100;
+		roundedNum = roundedNum + 0.5;
+		return (roundedNum/100);
+	}
 }
