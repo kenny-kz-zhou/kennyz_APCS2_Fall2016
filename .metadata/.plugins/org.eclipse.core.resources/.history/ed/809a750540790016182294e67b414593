@@ -1,0 +1,22 @@
+/**
+ * 
+ */
+
+/**
+ * @author APCS2
+ *
+ */
+public class DoMath {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		boolean num1 = Calculate.isPrime(37);
+		System.out.println(num1);
+	
+
+	}
+
+}
