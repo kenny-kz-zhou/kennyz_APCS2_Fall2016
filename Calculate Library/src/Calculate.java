@@ -70,6 +70,7 @@ public class Calculate {
 			return(givenNum);
 		}
 	}
+	
 	public static int max(int num1, int num2){
 		if(num1 > num2){
 			return (num1);
@@ -93,19 +94,26 @@ public class Calculate {
 		}
 	}
 	public static double round2(double num1){
-		num1 = num1 + .005;
-		double roundedNum = (int)num1 * 100;
-		return (roundedNum/100);
+		num1 = num1 * 100;
+		num1 += .5;
+		num1 = (int)num1;
+		return (num1/100);
 	}
-	public static double exponent(int power, double base){
-	  double answer = 1.0;
+	public static double exponent(int base, double power){
+	  double answer = 1.0;		
+	  if (power == 0){
+			return (1);
+	  }
 		for (int k = 1; k <= power; k++){
 			answer *= base;
 		}
-	return(answer);
+		return(answer);
 	}
 	public static int factorial (int fact){
 		int answer = 1;
+		if (fact == 0){
+			return(1);
+		}
 		for(int i = 1; i <= fact; i++){
 			answer *= i;
 		}
@@ -127,15 +135,24 @@ public class Calculate {
 			num1 = num2;
 			num2 = num2 % num3;
 		}
-		return (int)Calculate.absValue(num1);
+		return (num1);
 	}
 	public static double sqrt(double num1){
-		double ans = 0.0;
-		for(double k = num1 - 0.01; k > 0.0; k -= 0.01){
-			double multiplication = k * k;
-			ans = k;
-			if (multiplication == num1);
+//		double k = num1;
+//		double squareRoot = num1 /2;
+		for(double n = num1;;n -= 0.01){
+					if(n*n == num1){
+						return n;
 		}
-		return(ans);
-	}
-}
+//			k = squareRoot;
+//			squareRoot = (k + (n/k))/2;
+//			return squareRoot;
+//		}
+		}
+//		double squareRoot = num1 /2;
+//		for(double n = squareRoot; n > 0; n -= 0.01){
+//			squareRoot
+//			
+//		}
+			
+		}}

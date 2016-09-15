@@ -1,0 +1,22 @@
+/**
+ * 
+ */
+
+/**
+ * @author APCS2
+ *
+ */
+public class DoMath {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num1 = Calculate.square(6);
+		System.out.println(num1);
+	
+
+	}
+
+}

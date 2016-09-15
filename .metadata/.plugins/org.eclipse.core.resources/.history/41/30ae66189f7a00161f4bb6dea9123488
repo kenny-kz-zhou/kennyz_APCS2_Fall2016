@@ -1,0 +1,22 @@
+/**
+ * 
+ */
+
+/**
+ * @author APCS2
+ *
+ */
+public class DoMath {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		double num1 = Calculate.toDegrees(3.14159/3);
+		System.out.println(num1);
+	
+
+	}
+
+}
