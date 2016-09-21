@@ -12,7 +12,7 @@ public class DoMath {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(Calculate.sqrt(25));
+		System.out.println(Calculate.gcf(5, 10));
 	}
 
 }

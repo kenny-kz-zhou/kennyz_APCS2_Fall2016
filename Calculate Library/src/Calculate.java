@@ -129,6 +129,7 @@ public class Calculate {
 		}
 		return(true);		
 	}
+	//for GCF parameters: input (largerNumber, smallerNumber)
 	public static int gcf(int num1, int num2){
 		while(num2 != 0){
 			int num3 = num1;
@@ -138,21 +139,15 @@ public class Calculate {
 		return (num1);
 	}
 	public static double sqrt(double num1){
-//		double k = num1;
-//		double squareRoot = num1 /2;
-		for(double n = num1;;n -= 0.01){
-					if(n*n == num1){
-						return n;
+		for(double k = 0.1; k <= num1; k += 0.1){
+			double multiply = k * k;
+				if (Calculate.absValue(multiply - num1) <= .1){
+					return Calculate.round2(k);
+				} 
 		}
-//			k = squareRoot;
-//			squareRoot = (k + (n/k))/2;
-//			return squareRoot;
-//		}
-		}
-//		double squareRoot = num1 /2;
-//		for(double n = squareRoot; n > 0; n -= 0.01){
-//			squareRoot
-//			
-//		}
-			
-		}}
+		return num1;
+	}
+	public static String quadForm(int a, int b, int b){
+		return (-b + Calculate.sqrt(Calculate.discriminant());
+	}
+}
