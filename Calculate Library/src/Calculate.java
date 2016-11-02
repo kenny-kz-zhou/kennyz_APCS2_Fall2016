@@ -4,6 +4,9 @@
 
 /**
  * @author APCS2
+ *	Name: Kenny Zhou
+ *  Date: 10/20/16
+ * 
  *
  */
 public class Calculate {
@@ -50,15 +53,20 @@ public class Calculate {
 	public static String toMixedNum(int imprprNum, int denominator){ // Takes an improper fraction and changes it into a mixed number
 		int numerator = imprprNum % denominator;
 		int wholeNum = imprprNum / denominator;
-		return (wholeNum + " " + numerator + "/" + denominator);
+		if (numerator == 0){
+			return(wholeNum + "");
+		}else{
+			return (wholeNum + "_" + numerator + "/" + denominator);
+		}
 	}
 	
-	public static String foil(int A, int B, int C, int D, String n){ // Foils two binomials
-		int first = A * C;
-		int second = A * D + B * B;
-		int third = B * D;
-		return (first + n + "^2" + second +  + third);
-	}
+	public static String foil(int numA, int numB, int numC, int numD, String n){        //converts a binomial multiplication form to a quadratic equation
+        int letterA = numA * numC;
+        int letterB = numC * numB + numA * numD;
+        int letterC = numB * numD;
+
+        return(letterA + n + "^2 + " + letterB + n + " + " + letterC);
+    }
 	
 	public static boolean isDivisibleBy(int num1, int num2){ // Checks if a number is evenly divisible by another number
 		if (num2 == 0){
@@ -109,7 +117,7 @@ public class Calculate {
 			return (num1/100);		
 		}
 	}
-	public static double exponent(int base, double power){ // Increases a number to its power
+	public static double exponent(double base, int power){ // Increases a number to its power
 		if (power < 0){
 			throw new IllegalArgumentException("Power must be positive");
 		}
@@ -145,7 +153,7 @@ public class Calculate {
 		}
 		return(true);		
 	}
-	public static int gcf(int a, int b){ // Finds the greatest common factor or 2 integers
+	public static int gcf(int a, int b){ // Finds the greatest common factor for 2 integers
         int gcf=1;
         for(int i=1;i<=a;i++){
             if(isDivisibleBy(a,i) && isDivisibleBy(b,i)){
@@ -171,7 +179,7 @@ public class Calculate {
         double root2;
         int discrim = (int) Calculate.discriminant(a, b, c);
         if (discrim < 0){
-            return ("No real roots");
+            return ("no real roots");
         }
         if (discrim == 0){
             root1 = b * (-1) / (2 * a);

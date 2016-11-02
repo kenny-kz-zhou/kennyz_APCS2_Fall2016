@@ -71,3 +71,24 @@
 
 2016-10-05 10:11:17,750 [Thread-10] ERROR org.eclipse.jgit.util.FS - xcode-select: note: no developer tools were found at '/Applications/Xcode.app', requesting install. Choose an option in the dialog to download the command line developer tools.
 
+2016-10-10 15:21:18,323 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2016-10-10 15:21:19,143 [Thread-9] ERROR org.eclipse.jgit.util.FS - xcode-select: note: no developer tools were found at '/Applications/Xcode.app', requesting install. Choose an option in the dialog to download the command line developer tools.
+
+2016-10-10 15:21:19,157 [Thread-10] ERROR org.eclipse.jgit.util.FS - xcode-select: note: no developer tools were found at '/Applications/Xcode.app', requesting install. Choose an option in the dialog to download the command line developer tools.
+
+2016-10-12 10:39:17,327 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2016-10-12 10:39:18,306 [Thread-9] ERROR org.eclipse.jgit.util.FS - xcode-select: note: no developer tools were found at '/Applications/Xcode.app', requesting install. Choose an option in the dialog to download the command line developer tools.
+
+2016-10-12 10:39:18,345 [Thread-10] ERROR org.eclipse.jgit.util.FS - xcode-select: note: no developer tools were found at '/Applications/Xcode.app', requesting install. Choose an option in the dialog to download the command line developer tools.
+
+2016-10-27 09:00:04,132 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2016-10-27 09:00:04,521 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Updating Gradle version information cache failed. Using outdated cache.
+2016-10-27 09:00:05,232 [Thread-9] ERROR org.eclipse.jgit.util.FS - xcode-select: note: no developer tools were found at '/Applications/Xcode.app', requesting install. Choose an option in the dialog to download the command line developer tools.
+
+2016-10-27 09:00:05,240 [Thread-10] ERROR org.eclipse.jgit.util.FS - xcode-select: note: no developer tools were found at '/Applications/Xcode.app', requesting install. Choose an option in the dialog to download the command line developer tools.
+
+2016-10-30 23:36:56,429 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2016-10-30 23:37:00,384 [Thread-9] ERROR org.eclipse.jgit.util.FS - xcode-select: note: no developer tools were found at '/Applications/Xcode.app', requesting install. Choose an option in the dialog to download the command line developer tools.
+
+2016-10-30 23:37:00,394 [Thread-10] ERROR org.eclipse.jgit.util.FS - xcode-select: note: no developer tools were found at '/Applications/Xcode.app', requesting install. Choose an option in the dialog to download the command line developer tools.
+
