@@ -1,0 +1,55 @@
+package fracCalc;
+import java.util.*;
+public class FracCalc {
+
+    public static void main(String[] args) 
+    {
+    	Scanner input = new Scanner(System.in);
+    	while (input.indexOf("quit") == -1){
+    	String givenString = input.toString();
+    	System.out.println(produceAnswer(givenString));
+    	}
+    	
+        // TODO: Read the input from the user and call produceAnswer with an equation
+    	
+    }
+    
+    // ** IMPORTANT ** DO NOT DELETE THIS FUNCTION.  This function will be used to test your code
+    // This function takes a String 'input' and produces the result
+    //
+    // input is a fraction string that needs to be evaluated.  For your program, this will be the user input.
+    //      e.g. input ==> "1/2 + 3/4"
+    //        
+    // The function should return the result of the fraction after it has been calculated
+    //      e.g. return ==> "1_1/4"
+    public static String produceAnswer(String input)
+    {     
+        return (parseInput(input));
+    }
+ // TODO: Implement this function to produce the solution to the input
+    // TODO: Fill in the space below with any helper methods that you think you will need
+  
+    
+    public static String parseInput(String input){
+    	String[] parsedExpression = input.split(" ");
+    	return(parseOperands(parsedExpression));
+    }
+    public static String parseOperands(String[] operands){
+    	String secondFrac = operands[2].toString();		     // Takes the second operand
+    	int[] parsedFract = new int[2];						 // Creates new array for the split integers
+    	if (secondFrac.indexOf("_") > 1){					 // Check if fraction is Mixed Number
+    		String[] splitWholeNum = secondFrac.split("_");
+    		parsedFract[0] = Integer.parseInt(splitWholeNum[2]);
+    		String[] splitFraction = secondFrac.split("/");
+    		for (int i = 0; i < 2; i++){
+    			parsedFract[i + 1] = Integer.parseInt(splitFraction[i]);
+    		}
+//    	}else{
+//    		String[] splitFraction = secondFrac.split("/");
+//    		for (int i = 0; i < 2; i++){
+//    			parsedFract[i + 1] = Integer.parseInt(splitFraction[i]);		//Numerator in index 0, denominator in index 1.
+//    	}
+    }
+    	return("whole:" + parsedFract[0] +" numerator:" + parsedFract[1] + " denominator:" + parsedFract[2]);
+    }
+}

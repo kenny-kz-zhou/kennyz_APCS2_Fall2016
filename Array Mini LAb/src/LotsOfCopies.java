@@ -8,9 +8,8 @@ public class LotsOfCopies {
 		changeMe(num, strMain, arrMain);
 	}
 	public static void changeMe(int x, String str, int[] arr){
-		for (int i = 0; i < x; i++){
-			if (i <= 4){
-			arr[i] = ;
-		}
+		System.out.println(x);
+		System.out.println(str);
+		System.out.println(Arrays.toString(arr));
 	}
 }

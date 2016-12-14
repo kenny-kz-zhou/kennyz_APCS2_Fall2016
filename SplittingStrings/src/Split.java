@@ -58,7 +58,6 @@ public class Split
 			}
 //		if(numberBreads < 2){
 //			System.out.println("Not a sandwich");
-		}
 		if(numberBreads == 3){
 			int bread1 = foodIngredients.indexOf("bread") + 6;
 			String afterBread1 = foodIngredients.substring(bread1);
@@ -98,4 +97,3 @@ public class Split
 //        return (Arrays.toString(newString));
 //		}
 //    }
-}
