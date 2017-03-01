@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.*;
+public class weather {
+	public static void main(String[] Args) throws FileNotFoundException {
+	File weather = new File("./data/weather.txt");			// finds data file
+	Scanner input = new Scanner(weather);					// sets input of scanner to file
+	double[] temperatures = new double[8];					// create array for temperatures
+	double difference = 0.0;								// creates answer variable
+		for (int i = 0; i < temperatures.length; i++){		// loop to populate array
+			temperatures[i] = input.nextDouble();
+		}
+		for (int j = 0; j < temperatures.length - 1; j++){	// loop to subtract temperature values
+			difference = temperatures[j+1] - temperatures[j];
+			System.out.println(temperatures[j+1] + " to " + temperatures[j] + ", change = " + round2(difference));
+		}
+	}
+	public static double round2(double num1){ // Rounds a large decimal to 2 places
+		if (num1 >= 0){
+			num1 = num1 * 100;
+			num1 += .5;
+			num1 = (int)num1;
+			return (num1/100);
+		}else{
+			num1 = num1 * 100;
+			num1 -= .5;
+			num1 = (int)num1;
+			return (num1/100);		
+		}
+	}
+}	
+
